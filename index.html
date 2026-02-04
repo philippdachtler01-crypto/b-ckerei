@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bäckerei Müller | Frisch & Lokal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FFFBEB; /* Das helle Creme aus dem Screenshot */
+            --accent-color: #8B4513; /* Warmes Brot-Braun */
+            --text-dark: #2D2D2D;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Dekorative Brot-Illustration (SVG) ähnlich wie im Screenshot */
+        .decoration {
+            position: absolute;
+            bottom: 10%;
+            right: 5%;
+            width: 150px;
+            opacity: 0.1;
+            transform: rotate(15deg);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: 600;
+            color: #D4A373;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .opening-hours {
+            list-style: none;
+            text-align: center;
+        }
+
+        .opening-hours li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            border-radius: 15px;
+            overflow: hidden;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="subtitle">Frisch & Lokal</div>
+        <h1>Bäckerei Müller</h1>
+        <p style="margin-bottom: 30px; max-width: 600px;">Handwerk seit 1954. Wir backen täglich frisch mit Mehl aus der Region und viel Liebe zum Detail.</p>
+        <a href="#kontakt" class="cta-button">Jetzt Brötchen reservieren</a>
+
+        <svg class="decoration" viewBox="0 0 24 24" fill="var(--accent-color)">
+            <path d="M22,19C19.3,19 17.04,17.47 15.86,15.24C14.19,16.36 12.17,17 10,17C7.83,17 5.81,16.36 4.14,15.24C2.96,17.47 0.7,19 22,19M22,7C21.11,7 20.26,7.15 19.47,7.42C18.17,4.8 15.34,3 12,3C8.66,3 5.83,4.8 4.53,7.42C3.74,7.15 2.89,7 2,7A1,1 0 0,0 1,8C1,12.78 4.03,16.74 8.28,18.15C9.38,18.7 10.65,19 12,19C13.35,19 14.62,18.7 15.72,18.15C19.97,16.74 23,12.78 23,8A1,1 0 0,0 22,7Z" />
+        </svg>
+    </header>
+
+    <section id="ueber-uns">
+        <h2>Handwerk & Tradition</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Unsere Backstube</h3>
+                <p>Bei uns gibt es keine Tiefkühlteiglinge. Jeder Teig ruht mindestens 24 Stunden, um sein volles Aroma zu entfalten.</p>
+            </div>
+            <div class="card">
+                <h3>Regionale Zutaten</h3>
+                <p>Wir beziehen unser Getreide ausschließlich von Landwirten aus dem Umkreis von 50 Kilometern.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" style="background: #fff;">
+        <h2>Besuchen Sie uns</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Öffnungszeiten</h3>
+                <ul class="opening-hours">
+                    <li><span>Montag - Freitag</span> <span>06:00 - 18:00</span></li>
+                    <li><span>Samstag</span> <span>06:30 - 13:00</span></li>
+                    <li><span>Sonntag</span> <span>07:30 - 11:00</span></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Anfahrt</h3>
+                <p>Hauptstraße 12, 12345 Musterstadt</p>
+                <div class="map-container" style="margin-top: 15px;">
+                    <p style="color: #999;">[Interaktive Karte wird geladen...]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Bäckerei Müller - Handwerk mit Herz.</p>
+        <p><a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
+    </footer>
+
+</body>
+</html>
